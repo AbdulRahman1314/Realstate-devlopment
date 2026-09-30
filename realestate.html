@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Realty Office | Homes, Commercial &amp; Investment Properties</title>
+<meta name="description" content="Browse residential, commercial and investment properties and request a site visit.">
+<meta property="og:title" content="Your Realty Office"><meta property="og:description" content="Browse properties and request a site visit.">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14213d;--bg:#faf8f4;--ink:#2b2f36;--gold:#a8823a;--soft:#eef0f2;--card:#fff;--line:#dcdfe3;--ok:#1f7a4d;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1626;--ink:#e6e8ec;--soft:#172038;--card:#1a2440;--line:#2d3858;--navy:#0b1224;--gold:#d2a95a}}
+*,*:before,*:after{box-sizing:inherit}html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Figtree,system-ui,sans-serif;padding-bottom:70px}
+h1,h2,h3{font-family:Newsreader,Georgia,serif;line-height:1.15;margin:0 0 .5em;color:var(--ink)}
+h1{font-size:clamp(2rem,7vw,3.4rem)}h2{font-size:clamp(1.5rem,4.5vw,2.2rem)}h3{font-size:1.2rem}
+a{color:inherit}.w{max-width:1120px;margin:auto;padding:0 18px}.sec{padding:44px 0}.soft{background:var(--soft)}
+header{position:sticky;top:0;z-index:20;background:var(--navy);color:#fff;padding-top:env(safe-area-inset-top,0px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:600 1.25rem Newsreader,serif;color:#fff;text-decoration:none}.logo b{color:var(--gold)}
+nav{display:none;gap:18px;align-items:center}nav a{color:#fff;text-decoration:none;font-size:.95rem}nav a:hover{color:var(--gold)}
+.burger{background:none;border:1px solid #ffffff55;color:#fff;border-radius:8px;width:44px;height:44px;font-size:1.3rem}
+#menu{display:none;background:var(--navy);padding:8px 18px 16px}#menu.open{display:block}#menu a{display:block;color:#fff;text-decoration:none;padding:12px 0;border-bottom:1px solid #ffffff22}
+@media(min-width:900px){nav{display:flex}.burger,#menu{display:none!important}body{padding-bottom:0}}
+.btn{display:inline-block;border:2px solid transparent;border-radius:8px;padding:12px 20px;font:600 .95rem Figtree,sans-serif;text-decoration:none;cursor:pointer;min-height:46px;text-align:center}
+.b1{background:var(--gold);color:#14213d}.b2{background:transparent;border-color:currentColor;color:inherit}.b3{background:var(--navy);color:#fff}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.hero{background:linear-gradient(rgba(10,18,36,.72),rgba(10,18,36,.82)),repeating-linear-gradient(90deg,#1d2f57 0 40px,#182850 40px 80px);color:#fff;padding:64px 0 90px}
+.hero h1{color:#fff;max-width:14ch}.hero p{max-width:46ch;color:#e3e6ec}.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.search{background:var(--card);border-radius:12px;padding:16px;margin-top:-56px;position:relative;box-shadow:0 10px 30px rgba(0,0,0,.14);display:grid;gap:10px;grid-template-columns:1fr}
+@media(min-width:700px){.search{grid-template-columns:repeat(4,1fr)}}
+label{font-size:.85rem;font-weight:600;display:block;margin-bottom:4px}
+input,select,textarea{width:100%;min-height:46px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:inherit}
+.grid{display:grid;gap:18px;grid-template-columns:1fr}@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}@media(min-width:960px){.grid.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.img{aspect-ratio:16/10;display:block;position:relative;background:linear-gradient(160deg,#2b4175,#14213d)}.img svg{width:100%;height:100%;display:block}
+.tag{position:absolute;top:10px;left:10px;background:var(--gold);color:#14213d;font-size:.75rem;font-weight:600;padding:3px 9px;border-radius:99px}.tag.t2{left:auto;right:10px;background:#fff}
+.cb{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}.price{font:600 1.35rem Newsreader,serif;color:var(--gold)}.meta{font-size:.88rem;opacity:.85;display:flex;gap:12px;flex-wrap:wrap}
+.cb .row{margin-top:auto}.cb .btn{padding:10px 14px;flex:1}
+.filters{display:grid;gap:10px;grid-template-columns:1fr 1fr;margin-bottom:20px}@media(min-width:900px){.filters{grid-template-columns:repeat(5,1fr)}}
+.two{display:grid;gap:16px;grid-template-columns:1fr}@media(min-width:760px){.two{grid-template-columns:1fr 1fr}}
+.path{padding:28px;border-radius:12px;background:var(--navy);color:#fff}.path.alt{background:var(--card);color:var(--ink);border:2px solid var(--gold)}.path h3{color:inherit}
+.steps{display:grid;gap:14px;grid-template-columns:1fr}@media(min-width:760px){.steps{grid-template-columns:repeat(4,1fr)}}.steps div{border-left:3px solid var(--gold);padding-left:14px}
+form{display:grid;gap:14px;max-width:640px}.err{color:#b3261e;font-size:.85rem;min-height:1em}
+.notice{font-size:.85rem;background:var(--soft);border-left:3px solid var(--gold);padding:10px 14px;border-radius:4px;margin:16px 0}
+.det{display:grid;gap:24px}@media(min-width:900px){.det{grid-template-columns:2fr 1fr}}.side{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;gap:10px;align-self:start}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;margin:16px 0}.facts span{opacity:.7;font-size:.85rem;display:block}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none}.chips li{background:var(--soft);padding:5px 12px;border-radius:99px;font-size:.88rem}
+.bar{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--navy);padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px));gap:8px;z-index:30}.bar a{flex:1;color:#fff;text-align:center;text-decoration:none;padding:10px 4px;border:1px solid #ffffff44;border-radius:8px;font-weight:600;font-size:.9rem}.bar a:last-child{background:var(--gold);color:#14213d;border-color:var(--gold)}
+@media(min-width:900px){.bar{display:none}}
+footer{background:var(--navy);color:#cfd4de;padding:36px 0 24px;font-size:.92rem}footer h3{color:#fff;font-size:1rem}footer a{display:block;text-decoration:none;padding:3px 0}footer .grid{grid-template-columns:repeat(2,1fr)}@media(min-width:800px){footer .grid{grid-template-columns:repeat(4,1fr)}}
+.demo{background:#fff3cd;color:#5c4400;text-align:center;font-size:.82rem;padding:6px}
+#pg{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:50}
+header{transition:box-shadow .3s}header.sc{box-shadow:0 6px 18px rgba(0,0,0,.28)}
+nav a:not(.btn){position:relative;padding:6px 0}nav a:not(.btn):after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+nav a:not(.btn):hover:after,nav a[aria-current]:after{transform:scaleX(1)}nav a[aria-current]{color:var(--gold)}
+#menu a[aria-current]{color:var(--gold);padding-left:10px;border-left:3px solid var(--gold)}
+.img{overflow:hidden;aspect-ratio:4/3;background:linear-gradient(160deg,rgba(168,130,58,.22),rgba(43,65,117,.06));backdrop-filter:blur(3px);border:1px solid rgba(168,130,58,.4)}
+.det>div>.img{aspect-ratio:3/2;min-height:280px}
+body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Cg fill='%23a8823a' fill-opacity='.11'%3E%3Crect x='10' y='90' width='50' height='110'/%3E%3Crect x='70' y='50' width='60' height='150'/%3E%3Crect x='140' y='110' width='45' height='90'/%3E%3Crect x='195' y='30' width='55' height='170'/%3E%3Crect x='260' y='80' width='50' height='120'/%3E%3Crect x='320' y='60' width='65' height='140'/%3E%3C/g%3E%3C/svg%3E");background-repeat:repeat-x;background-position:bottom;background-attachment:fixed;background-size:400px 200px}
+.soft{background:color-mix(in srgb,var(--soft) 82%,transparent)}
+@media(prefers-reduced-motion:no-preference){
+html{scroll-behavior:smooth}
+#app.go{animation:down .55s cubic-bezier(.2,.7,.2,1)}
+@keyframes down{from{opacity:0;transform:translateY(-28px)}to{opacity:1;transform:none}}
+.hero h1,.hero p,.hero .row{animation:down .8s cubic-bezier(.2,.7,.2,1) both}.hero p{animation-delay:.15s}.hero .row{animation-delay:.3s}
+#menu{display:block;max-height:0;overflow:hidden;padding:0 18px;transition:max-height .45s ease,padding .45s}
+#menu.open{max-height:520px;padding:8px 18px 16px}
+#menu a{opacity:0;transform:translateY(-14px);transition:opacity .3s,transform .35s,color .2s}
+#menu.open a{opacity:1;transform:none;transition-delay:calc(var(--i,0)*45ms)}
+.burger{transition:transform .3s,background .2s}.burger[aria-expanded="true"]{transform:rotate(90deg);background:#ffffff22}
+.rv{opacity:0;transform:translateY(32px);transition:opacity .6s ease,transform .65s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.card.rv.in:hover{transform:translateY(-6px);box-shadow:0 14px 28px rgba(0,0,0,.16);transition-delay:0s;transition-duration:.3s}
+.img svg{transition:transform .7s ease}.card:hover .img svg{transform:scale(1.08)}
+.btn{transition:transform .2s,background .2s,box-shadow .2s}.btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.2)}.btn:active{transform:scale(.97)}
+.bar a{transition:transform .15s}.bar a:active{transform:scale(.94)}
+#pg{transition:width .1s linear}}
+</style></head><body>
+<div class="demo">Demo content: all listings, prices and contact details are placeholders to be replaced by the business.</div>
+<header><div class="w nav"><a class="logo" href="#/">Your<b>Realty</b></a>
+<nav aria-label="Main"><a href="#/">Home</a><a href="#/properties">Properties</a><a href="#/properties?l=Buy">Buy</a><a href="#/properties?l=Rent">Rent</a><a href="#/properties?c=Commercial">Commercial</a><a href="#/properties?n=1">New Projects</a><a href="#/about">About Us</a><a href="#/contact">Contact</a><a class="btn b1" href="#/visit">Book a Site Visit</a></nav>
+<button class="burger" id="bg" aria-label="Open menu" aria-expanded="false">&#9776;</button></div>
+<div id="menu"><a href="#/">Home</a><a href="#/properties">Properties</a><a href="#/properties?l=Buy">Buy</a><a href="#/properties?l=Rent">Rent</a><a href="#/properties?c=Commercial">Commercial</a><a href="#/properties?n=1">New Projects</a><a href="#/list">List Your Property</a><a href="#/about">About Us</a><a href="#/contact">Contact</a></div></header>
+<main id="app"></main>
+<footer><div class="w"><div class="grid">
+<div><h3>YourRealty</h3><p>Editable company tagline goes here.</p></div>
+<div><h3>Property</h3><a href="#/properties?l=Buy">Buy</a><a href="#/properties?l=Rent">Rent</a><a href="#/properties?c=Commercial">Commercial</a><a href="#/properties?n=1">New Projects</a></div>
+<div><h3>Customer</h3><a href="#/visit">Book Site Visit</a><a href="#/contact">Send Enquiry</a><a href="#/list">List Your Property</a></div>
+<div><h3>Contact</h3><a href="#/contact" id="fc"></a></div></div>
+<p class="notice" style="background:#ffffff14;color:#cfd4de">Disclaimer: Property information, pricing, availability and images are subject to change and must be independently verified before any transaction. Legal wording to be finalised for your jurisdiction.</p>
+<small>&copy; Your Realty Office. Privacy Policy, Terms &amp; Conditions: to be supplied by the business.</small></div></footer>
+<nav class="bar" aria-label="Quick actions"><a href="#" data-call>Call</a><a href="#" data-wa>WhatsApp</a><a href="#/visit">Site Visit</a></nav>
+<script>
+/* ===== CONFIG: replace with real business details ===== */
+const CFG={phone:"+00 000 000 0000",wa:"000000000000",email:"office@example.com",address:"Office address placeholder",hours:"Mon–Sat, 10:00–18:00 (placeholder)"};
+/* ===== DEMO DATA: replace with database records ===== */
+const P=[
+{id:1,slug:"skyline-3bhk",title:"Skyline 3 BHK Apartment",type:"Apartment",cat:"Residential",list:"Buy",loc:"Locality A",price:"Price on request",area:1450,bed:3,bath:3,park:2,floor:"8th of 14",furn:"Semi-furnished",status:"Ready to move",feat:1,isNew:1,proj:0,desc:"Placeholder description. Bright corner apartment close to schools and transit.",amen:["Lift","Power backup","Gym","Security"],near:["School (placeholder)","Metro (placeholder)"]},
+{id:2,slug:"garden-villa",title:"Garden Villa",type:"Villa",cat:"Residential",list:"Buy",loc:"Locality B",price:"Price on request",area:3200,bed:4,bath:4,park:3,floor:"Ground + 1",furn:"Unfurnished",status:"Resale",feat:1,isNew:0,proj:0,desc:"Placeholder description. Independent villa with private garden.",amen:["Garden","Parking","CCTV"],near:["Park (placeholder)","Market (placeholder)"]},
+{id:3,slug:"city-2bhk-rent",title:"City Centre 2 BHK for Rent",type:"Flat",cat:"Residential",list:"Rent",loc:"Locality C",price:"Monthly rent on request",area:980,bed:2,bath:2,park:1,floor:"3rd of 7",furn:"Furnished",status:"Available",feat:0,isNew:1,proj:0,desc:"Placeholder description. Deposit and lease terms to be confirmed by the office.",amen:["Lift","Security"],near:["Hospital (placeholder)"]},
+{id:4,slug:"main-road-shop",title:"Main Road Retail Shop",type:"Shop",cat:"Commercial",list:"Buy",loc:"Locality A",price:"Price on request",area:600,bed:0,bath:1,park:2,floor:"Ground",furn:"Unfurnished",status:"Available",feat:1,isNew:0,proj:0,desc:"Placeholder description. High footfall frontage.",amen:["Shutter","Parking"],near:["Bus stop (placeholder)"]},
+{id:5,slug:"business-park-office",title:"Business Park Office Suite",type:"Office",cat:"Commercial",list:"Rent",loc:"Locality D",price:"Monthly rent on request",area:1800,bed:0,bath:2,park:6,floor:"5th of 10",furn:"Furnished",status:"Available",feat:0,isNew:1,proj:0,desc:"Placeholder description. Open-plan suite with meeting rooms.",amen:["Lift","Power backup","Cafeteria"],near:["Metro (placeholder)"]},
+{id:6,slug:"riverside-residences",title:"Riverside Residences (New Project)",type:"Apartment",cat:"Residential",list:"Buy",loc:"Locality B",price:"Price range on request",area:1100,bed:2,bath:2,park:1,floor:"Various",furn:"Unfurnished",status:"Under construction",feat:1,isNew:1,proj:1,desc:"Placeholder project. Developer, possession date, floor plans and brochure to be added.",amen:["Clubhouse","Pool","Gym"],near:["River park (placeholder)"]}];
+const $=s=>document.querySelector(s),app=$("#app"),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const art=`<svg viewBox="0 0 160 100" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Property image placeholder"><rect width="160" height="100" fill="none"/><g fill="var(--gold)" opacity=".45"><rect x="20" y="40" width="30" height="60"/><rect x="55" y="25" width="36" height="75"/><rect x="96" y="50" width="26" height="50"/><rect x="127" y="35" width="22" height="65"/></g><circle cx="130" cy="18" r="8" fill="#d2a95a" opacity=".8"/></svg>`;
+const card=p=>`<article class="card"><a class="img" href="#/property/${p.slug}" aria-label="${esc(p.title)}">${art}${p.isNew?'<span class="tag">Just added</span>':''}<span class="tag t2">${p.list}</span></a><div class="cb"><h3>${esc(p.title)}</h3><div class="meta"><span>${p.type}</span><span>${p.loc}</span></div><div class="price">${p.price}</div><div class="meta"><span>${p.area} sq ft</span>${p.bed?`<span>${p.bed} bed</span>`:''}<span>${p.bath} bath</span><span>${p.park} parking</span></div><div class="row"><a class="btn b3" href="#/property/${p.slug}">View details</a><a class="btn b2" href="#/visit?p=${p.slug}">Book site visit</a></div></div></article>`;
+const fld=(id,l,t="text",req=1,x="")=>`<div><label for="${id}">${l}${req?" *":""}</label><input id="${id}" name="${id}" type="${t}" ${req?"required":""} ${x}><div class="err" id="e-${id}" aria-live="polite"></div></div>`;
+const opts=a=>a.map(o=>`<option>${o}</option>`).join("");
+function form(kind,inner,btn){return `<form id="f" data-k="${kind}" novalidate>${inner}<button class="btn b1" type="submit">${btn}</button></form><p class="notice">Demo: this form is not connected to a backend yet, so nothing is sent or stored. Connect it to an email service, CRM or database before launch.</p>`}
+const views={
+home(){const f=P.filter(p=>p.feat).slice(0,3),n=P.filter(p=>p.isNew).slice(0,3);
+return `<section class="hero"><div class="w"><h1>Find a place that feels like home.</h1><p>Explore residential, commercial and investment properties in your preferred location.</p><div class="row"><a class="btn b1" href="#/properties">Explore properties</a><a class="btn b2" href="#/visit">Book a site visit</a><a class="btn b2" href="#" data-call>Call now</a></div></div></section>
+<div class="w"><form class="search" id="sf" aria-label="Property search"><div><label for="sl">I want to</label><select id="sl"><option value="">Buy or rent</option>${opts(["Buy","Rent"])}</select></div><div><label for="sc">Category</label><select id="sc"><option value="">All</option>${opts(["Residential","Commercial"])}</select></div><div><label for="sb">Location</label><select id="sb"><option value="">Any</option>${opts([...new Set(P.map(p=>p.loc))])}</select></div><div><label>&nbsp;</label><button class="btn b1" style="width:100%">Search property</button></div></form></div>
+<section class="sec"><div class="w two"><div class="path"><h3>Book a site visit</h3><p>Pick a property, a date and a time. The team will contact you to confirm.</p><a class="btn b1" href="#/visit">Book a site visit</a></div><div class="path alt"><h3>Explore all properties</h3><p>Browse the full catalogue and filter by type, location and price.</p><a class="btn b3" href="#/properties">Explore all properties</a></div></div></section>
+<section class="sec soft"><div class="w"><h2>Featured properties</h2><div class="grid g3">${f.map(card).join("")}</div><p><a class="btn b2" href="#/properties">View all properties</a></p></div></section>
+<section class="sec"><div class="w"><h2>New listings</h2><div class="grid g3">${n.map(card).join("")}</div></div></section>
+<section class="sec soft"><div class="w"><h2>How it works</h2><div class="steps"><div><h3>Search</h3>Find properties that match your requirement.</div><div><h3>Explore</h3>View photos, details, amenities and location.</div><div><h3>Visit</h3>Request a property site visit.</div><div><h3>Decide</h3>Discuss next steps with the team.</div></div></div></section>
+<section class="sec"><div class="w"><h2>Want to sell or rent your property?</h2><p>Tell us about your property and the team will get in touch.</p><a class="btn b3" href="#/list">List your property</a></div></section>`},
+properties(q){const l=q.get("l")||"",c=q.get("c")||"",b=q.get("b")||"",n=q.get("n")||"",t=q.get("t")||"",bed=q.get("bed")||"",s=q.get("s")||"new";
+let r=P.filter(p=>(!l||p.list===l)&&(!c||p.cat===c)&&(!b||p.loc===b)&&(!n||p.proj)&&(!t||p.type===t)&&(!bed||p.bed>=+bed));
+if(s==="area")r.sort((a,b)=>b.area-a.area);else if(s==="feat")r.sort((a,b)=>b.feat-a.feat);else r.sort((a,b)=>b.isNew-a.isNew);
+const sel=(id,lab,o,v)=>`<div><label for="${id}">${lab}</label><select id="${id}"><option value="">Any</option>${o.map(x=>`<option ${x==v?"selected":""}>${x}</option>`).join("")}</select></div>`;
+return `<div class="w sec"><h1 style="font-size:2rem">${n?"New projects":l||c||"All properties"}</h1><div class="filters" id="flt">${sel("fl","Buy / Rent",["Buy","Rent"],l)}${sel("fc","Category",["Residential","Commercial"],c)}${sel("fb","Location",[...new Set(P.map(p=>p.loc))],b)}${sel("ft","Type",[...new Set(P.map(p=>p.type))],t)}${sel("fbed","Min bedrooms",["1","2","3","4"],bed)}<div><label for="fs">Sort by</label><select id="fs"><option value="new">Newest</option><option value="feat" ${s=="feat"?"selected":""}>Featured</option><option value="area" ${s=="area"?"selected":""}>Area</option></select></div></div>
+<p>${r.length} properties</p>${r.length?`<div class="grid g3">${r.map(card).join("")}</div>`:`<div class="notice">No properties match these filters. <a href="#/properties">Clear filters</a> or <a href="#/contact">tell us what you need</a>.</div>`}</div>`},
+property(q,slug){const p=P.find(x=>x.slug===slug);if(!p)return `<div class="w sec"><h1>Property not found</h1><p>This listing may have been removed. <a href="#/properties">Browse all properties</a>.</p></div>`;
+return `<div class="w sec"><p><a href="#/properties">&larr; All properties</a></p><div class="det"><div><div class="img" style="border-radius:12px">${art}<span class="tag">${p.status}</span></div><h1 style="margin-top:18px">${esc(p.title)}</h1><p>${p.loc} &middot; ${p.type} for ${p.list.toLowerCase()}</p><div class="price">${p.price}</div>
+<div class="facts"><div><span>Area</span>${p.area} sq ft</div><div><span>Bedrooms</span>${p.bed||"n/a"}</div><div><span>Bathrooms</span>${p.bath}</div><div><span>Parking</span>${p.park}</div><div><span>Floor</span>${p.floor}</div><div><span>Furnishing</span>${p.furn}</div></div>
+<h2>About this property</h2><p>${esc(p.desc)}</p><h3>Amenities</h3><ul class="chips">${p.amen.map(a=>`<li>${a}</li>`).join("")}</ul><h3 style="margin-top:20px">Nearby</h3><ul class="chips">${p.near.map(a=>`<li>${a}</li>`).join("")}</ul><p class="notice">Map, image gallery and agent details: add once real data is available.</p></div>
+<aside class="side"><h3>Interested?</h3><a class="btn b1" href="#/visit?p=${p.slug}">Book site visit</a><a class="btn b3" href="#/contact?p=${p.slug}">Send enquiry</a><a class="btn b2" href="#" data-call>Call now</a><a class="btn b2" href="#" data-wa>WhatsApp</a></aside></div></div>`},
+visit(q){const pp=q.get("p")||"";return `<div class="w sec"><h1>Book a property site visit</h1><p>Request a slot and our team will contact you to confirm.</p>${form("visit",fld("name","Full name")+fld("phone","Mobile number","tel")+fld("email","Email","email",0)+`<div><label for="prop">Property interested in</label><select id="prop"><option value="">Not sure yet</option>${P.map(p=>`<option value="${p.slug}" ${p.slug==pp?"selected":""}>${esc(p.title)}</option>`).join("")}</select></div>`+fld("date","Preferred date","date")+fld("time","Preferred time","time")+fld("vis","Number of visitors","number",0,'min="1" value="1"')+`<div><label for="msg">Message / requirement</label><textarea id="msg" rows="3"></textarea></div>`,"Request site visit")}</div>`},
+list(){return `<div class="w sec"><h1>Want to sell or rent your property?</h1><p>Share the basics. The team reviews each request and calls you to discuss the next steps.</p>${form("list",fld("name","Name")+fld("phone","Phone","tel")+`<div><label for="pt">Property type</label><select id="pt">${opts(["Apartment","House / Villa","Shop","Office","Plot / Land"])}</select></div>`+fld("loc","Location")+fld("price","Expected price",'text',0)+`<div><label for="msg">Message</label><textarea id="msg" rows="3"></textarea></div>`,"List your property")}</div>`},
+about(){return `<div class="w sec"><h1>About us</h1><p>Company introduction placeholder. Describe who you are, the areas you serve and how you work with clients. Add only facts you can support.</p><div class="two"><div class="card cb"><h3>Mission</h3><p>Placeholder mission statement.</p></div><div class="card cb"><h3>Vision</h3><p>Placeholder vision statement.</p></div></div><h2 style="margin-top:32px">Areas we serve</h2><ul class="chips">${[...new Set(P.map(p=>p.loc))].map(l=>`<li><a href="#/properties?b=${encodeURIComponent(l)}">${l}</a></li>`).join("")}</ul><h2 style="margin-top:32px">Services</h2><p>Buying, selling, rental and commercial assistance, site visit coordination. Keep only what you actually offer.</p></div>`},
+contact(q){const pp=q.get("p");return `<div class="w sec"><h1>Contact us</h1><p>${CFG.address}<br>Phone: ${CFG.phone}<br>Email: ${CFG.email}<br>Hours: ${CFG.hours}</p><div class="row" style="margin:0 0 24px"><a class="btn b3" href="#" data-call>Call now</a><a class="btn b2" href="#" data-wa>WhatsApp</a></div>${form("contact",fld("name","Name")+fld("phone","Phone","tel")+fld("email","Email","email",0)+fld("subject","Subject","text",0,`value="${pp?"Enquiry: "+esc(pp):""}"`)+`<div><label for="msg">Message</label><textarea id="msg" rows="4" required></textarea><div class="err" id="e-msg"></div></div>`,"Send message")}</div>`},
+thanks(q){const k=q.get("k");return `<div class="w sec"><h1>Thank you</h1><p>${k=="visit"?"Your site-visit request has been noted. Our team will contact you shortly to confirm the appointment.":"Your message has been noted. Our team will contact you shortly."}</p><p class="notice">Demo site: no data was actually sent.</p><a class="btn b3" href="#/properties">Keep exploring</a></div>`}};
+function route(){const h=location.hash.slice(1)||"/",[path,qs]=h.split("?"),q=new URLSearchParams(qs||""),seg=path.split("/").filter(Boolean),v=seg[0]||"home";
+app.innerHTML=(views[v]||views.home)(q,seg[1]);window.scrollTo({top:0,behavior:"instant"});$("#menu").classList.remove("open");$("#bg").setAttribute("aria-expanded","false");$("#bg").innerHTML="&#9776;";
+app.classList.remove("go");void app.offsetWidth;app.classList.add("go");
+document.querySelectorAll("nav a,#menu a").forEach(a=>{const h=a.getAttribute("href");(h===location.hash||(!location.hash&&h==="#/"))?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current")});
+reveal();
+document.title=({home:"Your Realty Office | Homes, Commercial & Investment Properties",properties:"Properties for Sale & Rent | Your Realty",property:"Property Details | Your Realty",visit:"Book a Site Visit | Your Realty",list:"List Your Property | Your Realty",about:"About Us | Your Realty",contact:"Contact | Your Realty"})[v]||"Your Realty";
+const s=$("#sf");if(s)s.onsubmit=e=>{e.preventDefault();const u=new URLSearchParams();[["l","sl"],["c","sc"],["b","sb"]].forEach(([k,i])=>$("#"+i).value&&u.set(k,$("#"+i).value));location.hash="/properties?"+u};
+const fl=$("#flt");if(fl)fl.onchange=()=>{const u=new URLSearchParams();[["l","fl"],["c","fc"],["b","fb"],["t","ft"],["bed","fbed"],["s","fs"]].forEach(([k,i])=>$("#"+i).value&&u.set(k,$("#"+i).value));location.hash="/properties?"+u};
+const f=$("#f");if(f)f.onsubmit=e=>{e.preventDefault();let ok=1;f.querySelectorAll("[required]").forEach(i=>{const er=$("#e-"+i.id);let m="";if(!i.value.trim())m="This field is required.";else if(i.type=="tel"&&!/^[+\d\s-]{7,}$/.test(i.value))m="Enter a valid phone number.";else if(i.type=="email"&&!/^\S+@\S+\.\S+$/.test(i.value))m="Enter a valid email address.";if(er)er.textContent=m;if(m)ok=0});const em=f.querySelector("#email");if(em&&em.value&&!/^\S+@\S+\.\S+$/.test(em.value)){$("#e-email").textContent="Enter a valid email address.";ok=0}
+if(ok)location.hash="/thanks?k="+f.dataset.k}}
+const RM=matchMedia("(prefers-reduced-motion:reduce)").matches;let io;
+function reveal(){if(RM)return;io&&io.disconnect();io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});
+app.querySelectorAll(".card,.path,.steps>div,.sec h2,.facts,.side,form,.notice,.chips").forEach((el,i)=>{el.classList.add("rv");el.style.setProperty("--d",(i%3)*.09+"s");io.observe(el)})}
+window.addEventListener("hashchange",route);
+const pg=document.createElement("div");pg.id="pg";document.body.prepend(pg);
+addEventListener("scroll",()=>{const h=document.documentElement;pg.style.width=(scrollY/((h.scrollHeight-innerHeight)||1)*100)+"%";$("header").classList.toggle("sc",scrollY>10)},{passive:true});
+document.querySelectorAll("#menu a").forEach((a,i)=>a.style.setProperty("--i",i));
+$("#bg").onclick=()=>{const o=$("#menu").classList.toggle("open");$("#bg").setAttribute("aria-expanded",o);$("#bg").innerHTML=o?"&#10005;":"&#9776;"};
+document.addEventListener("click",e=>{const a=e.target.closest("[data-call],[data-wa]");if(!a)return;e.preventDefault();location.href=a.hasAttribute("data-call")?"tel:"+CFG.phone.replace(/\s/g,""):"https://wa.me/"+CFG.wa});
+$("#fc").textContent=CFG.phone+" · "+CFG.email;route();
+</script></body></html>
